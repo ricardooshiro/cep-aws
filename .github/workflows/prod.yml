@@ -14,7 +14,7 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v5
         with:
-          distribution: 'openjdk'
+          distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '21'
       - name: Build project
         run: mvn clean install -D skipTests
