@@ -5,11 +5,11 @@ on:
     branches: [main]
 
 jobs:
-  build-and-push:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write # Grant write access to packages for pushing to GHCR
+#    permissions:
+#      contents: read
+#      packages: write # Grant write access to packages for pushing to GHCR
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
@@ -28,3 +28,11 @@ jobs:
       - name: Push image docker
         run: docker push ricardooshiro517/cep
 
+  deploy:
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - name: Pull image from docker hub
+        run: docker pull ricardooshiro517/cep:latest
+      - name: Run docker container
+        run: docker run -d -p 8080:8080 --name cep ricardooshiro517/cep
