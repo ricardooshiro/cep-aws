@@ -24,7 +24,7 @@ jobs:
       - name: Login Docker Hub
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
       - name: Build docker image
-        run: docker build -t ricardooshiro/cep .
+        run: docker build -t ricardooshiro517/cep .
       - name: Push image docker
-        run: docker push ricardooshiro/cep
+        run: docker push ricardooshiro517/cep
 
