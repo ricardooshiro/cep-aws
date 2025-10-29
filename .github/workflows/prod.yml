@@ -5,8 +5,11 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write # Grant write access to packages for pushing to GHCR
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
