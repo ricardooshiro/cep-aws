@@ -35,4 +35,4 @@ jobs:
       - name: Pull image from docker hub
         run: docker pull ricardooshiro517/cep:latest
       - name: Run docker container
-        run: docker run -d -p 8080:8080 --name cep ricardooshiro517/cep
+        run: docker run -d -p 8080:8080 --name cep-aws ricardooshiro517/cep
