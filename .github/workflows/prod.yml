@@ -34,7 +34,7 @@ jobs:
     steps:
     - name: Pull image from docker hub
       run: docker pull ricardooshiro517/cep:latest
-  #  - name: Remove docker container
-  #    run: docker rm -f cep-aws
+    - name: Remove docker container
+      run: docker rm -f cep-aws
     - name: Run docker container
       run: docker run -d -p 8080:8080 --name cep-aws ricardooshiro517/cep

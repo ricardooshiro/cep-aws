@@ -6,3 +6,14 @@ GET 127.0.0.1:8080/consulta-cep/01001000
 ###
 
 GET 54.145.221.116:8080/consulta-cep/01001000
+
+###
+# docker exec abf curl http://127.0.0.1:8080/consulta-cep/01001000
+# curl http://127.0.0.1:8080/consulta-cep/01001000
+# curl http://44.204.111.123:8080/consulta-cep/01001000
+# curl http://18.206.107.28:8080/consulta-cep/01001000
+# http://44.204.111.123:8080/consulta-cep/01001000
+GET 44.204.111.123:8080/consulta-cep/01001000
+# \
+# curl http://172.17.0.1:8080/consulta-cep/01001000
+# curl http://44.204.111.123:8080/consulta-cep/01001000
